@@ -3,7 +3,9 @@ import whyChooseImg from '../assets/whyChoose.png'; // Replace with your actual 
 
 const WhyChoose = () => {
     return (
-        <section className="py-20 bg-gray-50 px-6 md:px-20">
+        <section
+            className="py-20 px-6 md:px-20 bg-gradient-to-br from-purple-400 via-pink-200 to-white"
+        >
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <div>

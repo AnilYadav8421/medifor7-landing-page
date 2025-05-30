@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const features = [
     {
@@ -58,14 +59,18 @@ const Features = () => {
 
             <div className="max-w-7xl mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {features.map((feature, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className="flex flex-col items-center p-6 border rounded-lg shadow-sm hover:shadow-md transition"
+                        className="flex flex-col items-center p-6 rounded-xl shadow-md hover:shadow-lg transition bg-gradient-to-br from-white to-purple-50"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        viewport={{ once: true }}
                     >
                         <div className="mb-4">{feature.icon}</div>
                         <h3 className="text-xl font-semibold mb-2 text-gray-900 text-center">{feature.title}</h3>
                         <p className="text-gray-600 text-center">{feature.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>

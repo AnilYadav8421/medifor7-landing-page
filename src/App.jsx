@@ -4,6 +4,10 @@ import HeroSection from './components/HeroSection';
 import About from './components/About';
 import Features from './components/Features';
 import WhyChoose from './components/WhyChoose';
+import Achievements from './components/Achievements';
+import Footer from './components/Footer';
+import ContactUs from './components/ContactUs';
+import HowItWorks from './components/HowItWorks';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
           <About />
         </section>
 
+        <section id="howitworks">
+          <HowItWorks />
+        </section>
+
         <section id="features">
           <Features />
         </section>
@@ -26,9 +34,16 @@ function App() {
           <WhyChoose />
         </section>
 
-        <section id="achievements" className="min-h-screen flex items-center justify-center bg-gray-50">
-          <h2 className="text-3xl font-bold">Achievements</h2>
-          {/* Achievements content */}
+        <section id="achievements">
+          <Achievements />
+        </section>
+
+        <section id="contact">
+          <ContactUs />
+        </section>
+
+        <section id="Footer">
+          <Footer />
         </section>
       </main>
     </>
